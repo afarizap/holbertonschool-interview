@@ -4,6 +4,7 @@ Resolve minimum operations to get # of leters with just
 copy and paste operations
 """
 
+
 def minOperations(n):
     """ Get all the common divisors,
         store them in a list
