@@ -10,13 +10,20 @@ can be opened.
 
 
 def canUnlockAll(boxes):
-    """ returns true if all boxes can be open """
-    new_list = [0]
-    
-    for index in new_list:
-        for num in boxes[index]:
-            if num not in new_list and num < len(boxes) \
-               and isinstance(num, int) and num >= 0:
-                new_list.append(num)
-
-    return(bool(len(new_list) == len(boxes)))
+    """Return true if all boxes can be opened or false if not"""
+    new = set(boxes[0])
+    unlocked = 1
+    while unlocked < len(boxes) - 1:
+        print(unlocked, boxes, new)
+        tmp = new.copy()
+        if len(new) == 0:
+            return False
+        for i in tmp:
+            if len(boxes[i]) == 0:
+                new.discard(i)
+            else: 
+                new |= set(boxes[i])
+                boxes[i] = []
+                new.discard(i)
+                unlocked += 1
+    return True
