@@ -4,4 +4,4 @@
 
 Write a method that determines if all the boxes can be opened.
 
-![lockboxes](https://raw.githubusercontent.com/afarizap/holbertonschool-interview/main/0x00-lockboxes/img/Captura%20de%20pantalla%20de%202021-07-22%2008-45-06.png)
+![lockboxes](https://raw.githubusercontent.com/afarizap/holbertonschool-interview/main/0x00-lockboxes/img/lockboxes.png)
