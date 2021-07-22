@@ -12,11 +12,11 @@ can be opened.
 def canUnlockAll(boxes):
     """Return true if all boxes can be opened or false if not"""
     new = set(boxes[0])
-    old = []
+    old = [0]
     boxes[0] = []
     unlocked = 1
     while unlocked < len(boxes):
-        # print(unlocked, boxes, new, len(boxes))
+        print(unlocked, boxes, new, len(boxes), old)
         tmp = new.copy()
         if len(new) == 0:
             return False
