@@ -21,10 +21,10 @@ try:
         if calls % 10 == 0:
             print("File size: {}".format(size))
             for k, v in sorted(stats.items()):
-                print("{}: {}".format(k, v))
+                print("{}: {:d}".format(k, v))
 except KeyboardInterrupt:
     pass
 finally:
-    print("File size: {}".format(size))
+    print("File size: {:d}".format(size))
     for k, v in sorted(stats.items()):
-        print("{}: {}".format(k, v))
+        print("{}: {:d}".format(k, v))
