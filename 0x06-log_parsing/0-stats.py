@@ -20,11 +20,9 @@ try:
                 stats.update({n[7]: 1})
         if calls % 10 == 0:
             print("File size: {}".format(size))
-    for k, v in sorted(stats.items()):
-        print("{}: {}".format(k, v))
+            for k, v in sorted(stats.items()):
+                print("{}: {}".format(k, v))
 except KeyboardInterrupt:
-    pass
-finally:
     print("File size: {}".format(size))
     for k, v in sorted(stats.items()):
         print("{}: {}".format(k, v))
