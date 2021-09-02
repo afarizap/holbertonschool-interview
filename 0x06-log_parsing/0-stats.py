@@ -22,7 +22,7 @@ try:
             for k, v in sorted(stats.items()):
                 print("{}: {}".format(k, v))
 except KeyboardInterrupt:
-    sys.stdout.flush()
+    pass
 finally:
     print("File size: {}".format(size))
     for k, v in sorted(stats.items()):
