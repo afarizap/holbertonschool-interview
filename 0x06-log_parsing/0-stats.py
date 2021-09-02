@@ -23,6 +23,8 @@ try:
             for k, v in sorted(stats.items()):
                 print("{}: {}".format(k, v))
 except KeyboardInterrupt:
+    pass
+finally:
     print("File size: {}".format(size))
     for k, v in sorted(stats.items()):
         print("{}: {}".format(k, v))
