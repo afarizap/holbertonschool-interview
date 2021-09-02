@@ -9,9 +9,11 @@ def stats_print(size, stats):
     for k, v in sorted(stats.items()):
         print("{}: {}".format(k, v))
 
+
 calls = 0
 size = 0
 stats = {}
+
 
 try:
     for line in sys.stdin:
@@ -25,7 +27,5 @@ try:
             stats.update({n[7]: 1})
         if calls % 10 == 0:
             stats_print(size, stats)
-
 except KeyboardInterrupt:
     stats_print(size, stats)
-    raise
