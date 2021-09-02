@@ -3,6 +3,12 @@
 import sys
 
 
+def stats_print(size, stats):
+    """print stats"""
+    print("File size: {}".format(size))
+    for k, v in sorted(stats.items()):
+        print("{}: {}".format(k, v))
+
 calls = 0
 size = 0
 stats = {}
@@ -18,12 +24,8 @@ try:
         else:
             stats.update({n[7]: 1})
         if calls % 10 == 0:
-            print("File size: {}".format(size))
-            for k, v in sorted(stats.items()):
-                print("{}: {}".format(k, v))
+            stats_print(size, stats)
+
 except KeyboardInterrupt:
-    pass
-finally:
-    print("File size: {}".format(size))
-    for k, v in sorted(stats.items()):
-        print("{}: {}".format(k, v))
+    stats_print(size, stats)
+    raise
