@@ -6,6 +6,7 @@ import sys
 calls = 0
 size = 0
 stats = {}
+
 try:
     for line in sys.stdin:
         n = line.split()
@@ -21,7 +22,8 @@ try:
             for k, v in sorted(stats.items()):
                 print("{}: {}".format(k, v))
 except KeyboardInterrupt:
+    sys.stdout.flush()
+finally:
     print("File size: {}".format(size))
     for k, v in sorted(stats.items()):
         print("{}: {}".format(k, v))
-    raise
