@@ -12,9 +12,11 @@ try:
         n = line.split()
         calls += 1
         try:
-            int(n[-1])
             int(n[-2])
-        except (ValueError, IndexError):
+        except IndexError:
+            continue
+        except ValueError:
+            size += int(n[-1])
             continue
         size += int(n[-1])
         if n[-2] in stats.keys():
