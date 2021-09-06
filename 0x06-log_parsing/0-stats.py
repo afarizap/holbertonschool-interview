@@ -17,7 +17,7 @@ try:
         except (ValueError, IndexError):
             continue
         size += int(n[-1])
-        if n[7] in stats.keys():
+        if n[-2] in stats.keys():
             tmp = int(stats[n[-2]]) + 1
             stats.update({n[-2]: tmp})
         else:
