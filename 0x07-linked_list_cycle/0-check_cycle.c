@@ -13,7 +13,7 @@ int check_cycle(listint_t *list)
 {
 	listint_t *tortoise, *hare;
 
-	if (!list || !list->next)
+	if (!list || !list->next || !list->next->next)
 		return (0);
 	tortoise = list;
 	hare = list->next;
