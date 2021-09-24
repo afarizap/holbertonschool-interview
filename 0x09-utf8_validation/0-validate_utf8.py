@@ -6,4 +6,4 @@ Determines if a given data set represents a
 import chardet
 
 def validUTF8(data):
-    return max(data) < 128
+    return max(data) < 127
