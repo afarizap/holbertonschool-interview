@@ -6,6 +6,7 @@ Determines if a given data set represents a
 
 
 def validUTF8(data):
+    "iterate over data and check if utf-8"
     for i in data:
         try:
             if int(i) == 0:
