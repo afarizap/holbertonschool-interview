@@ -8,7 +8,7 @@ Determines if a given data set represents a
 def validUTF8(data):
     "iterate over data and check if utf-8"
     for i in data:
-        if bin(i)[:10] >= bin(126):
-            print(bin(i)[:10])
+        if bin(i)[:9] >= bin(126):
+            print(bin(i)[:9])
             return False
     return True
